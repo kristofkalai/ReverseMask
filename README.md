@@ -3,10 +3,13 @@ Reverse the mask functionality in SwiftUI! 🔄
 
 ### How to use
 
-You can use the mask like so:
+You can use the mask to "look through" the black background like so:
 
 ```swift
-MaskedTabView(offset: $viewModel.offset, index: $viewModel.index, overlayColor: .red, bounces: bounces, tabs: tabs, tabView: tabView, content: content)
+Color.black
+    .reverseMask {
+        // your view, like an image
+    }
 ```
 
 For details see the Example app.

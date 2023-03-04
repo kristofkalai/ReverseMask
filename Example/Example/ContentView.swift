@@ -6,16 +6,53 @@
 //
 
 import SwiftUI
+import ReverseMask
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Spacer()
+            VStack {
+                content(for: .red.opacity(0.6))
+                Spacer()
+                    .frame(height: 50)
+                content(for: .clear)
+            }
+            .padding()
+            .background(.green)
+            Spacer()
         }
-        .padding()
+    }
+
+    private func content(for color: Color) -> some View {
+        VStack(spacing: .zero) {
+            Text("With reverse mask:")
+Color.black
+    .reverseMask {
+        image
+    }
+                .overlay {
+                    image
+                        .foregroundColor(color)
+                }
+                .frame(width: 200, height: 100)
+
+            Text("Without reverse mask:")
+            ZStack {
+                image
+                    .foregroundColor(color)
+            }
+            .frame(width: 200, height: 100)
+            .background(.black)
+        }
+    }
+
+    private var image: some View {
+        Image(systemName: "circle")
+            .renderingMode(.template)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 100, height: 50)
     }
 }
 

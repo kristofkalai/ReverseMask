@@ -14,6 +14,7 @@
 		58EAD57329B3A555003A93BA /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EAD57229B3A555003A93BA /* ExampleTests.swift */; };
 		58EAD57D29B3A555003A93BA /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EAD57C29B3A555003A93BA /* ExampleUITests.swift */; };
 		58EAD57F29B3A555003A93BA /* ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EAD57E29B3A555003A93BA /* ExampleUITestsLaunchTests.swift */; };
+		58EAD58D29B3A610003A93BA /* ReverseMask in Frameworks */ = {isa = PBXBuildFile; productRef = 58EAD58C29B3A610003A93BA /* ReverseMask */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EAD58D29B3A610003A93BA /* ReverseMask in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				58EAD58C29B3A610003A93BA /* ReverseMask */,
+			);
 			productName = Example;
 			productReference = 58EAD55E29B3A554003A93BA /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 58EAD55529B3A554003A93BA;
+			packageReferences = (
+				58EAD58B29B3A610003A93BA /* XCRemoteSwiftPackageReference "ReverseMask" */,
+			);
 			productRefGroup = 58EAD55F29B3A554003A93BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -581,6 +589,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58EAD58B29B3A610003A93BA /* XCRemoteSwiftPackageReference "ReverseMask" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stateman92/ReverseMask";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58EAD58C29B3A610003A93BA /* ReverseMask */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58EAD58B29B3A610003A93BA /* XCRemoteSwiftPackageReference "ReverseMask" */;
+			productName = ReverseMask;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58EAD55629B3A554003A93BA /* Project object */;
 }
