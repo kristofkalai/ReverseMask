@@ -27,10 +27,10 @@ struct ContentView: View {
     private func content(for color: Color) -> some View {
         VStack(spacing: .zero) {
             Text("With reverse mask:")
-Color.black
-    .reverseMask {
-        image
-    }
+            Color.black
+                .reverseMask {
+                    image
+                }
                 .overlay {
                     image
                         .foregroundColor(color)
